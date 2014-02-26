@@ -16,6 +16,6 @@ Cvičenia
 * Pon 12:20 H6
 * Štv 16:30 H6
 
-Inštrukcie na odovzdávanie cvičení čoskoro pribudú.
-
 * [Cvičenie 1](cv01)
+
+[Inštrukcie na odovzdávanie riešení](odovzdavanie.md)
