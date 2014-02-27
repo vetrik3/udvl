@@ -17,5 +17,6 @@ Cvičenia
 * Štv 16:30 H6
 
 * [Cvičenie 1](cv01)
+* [Cvičenie 2](cv02)
 
 [Inštrukcie na odovzdávanie riešení](odovzdavanie.md)
