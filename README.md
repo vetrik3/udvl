@@ -18,5 +18,6 @@ Cvičenia
 
 * [Cvičenie 1](cv01)
 * [Cvičenie 2](cv02)
+* [Cvičenie 3](cv03)
 
 [Inštrukcie na odovzdávanie riešení](odovzdavanie.md)
