@@ -124,109 +124,17 @@ Riešenie odovzdajte do vetvy `cv03` v adresári `cv03`.  Odovzdávajte súbor
 Odovzdávanie riešení v iných jazykoch konzultujte s cvičiacimi.
 
 ### C++
-Nasledovný program [`cv03.cpp`](cv03.cpp) musí byť skompilovateľný, keď sa k
-nemu priloží vaša knižnica:
-```c++
-#include <iostream>
+Program [`cv03.cpp`](cv03.cpp) musí byť skompilovateľný keď k nemu priložíte vašu knižnicu
+(súbory `formula.h`/`formula.cpp`, ktoré odovzdáte). 
 
-#include "formula.h"
-
-int main()
-{
-	Formula *f = new Equivalence(
-		new Conjunction(
-			new Variable("alfa"),
-			new Negation(new Variable("beta"))
-		),
-		new Disjunction(
-			new Variable("alfa"),
-			new Implication(
-				new Variable("beta"),
-				new Variable("alfa")
-			)
-		)
-	);
-	// vypise ((alfa&-beta)<=>(alfa|(beta=>alfa)))
-	std::cout << f->toString() << std::endl;
-	Interpretation i;
-	i["alfa"] = true;
-	i["beta"] = false;
-	if (f->eval(i))
-		std::count << "pravdiva" << std::endl;
-	else
-		std::count << "nepravdiva" << std::endl;
-
-	delete f;
-	return 0;
-}
-```
 Poznámka: formula vždy vlastní svoje podformuly. Príkaz `delete f` v
 programe zmaže zároveň aj všetky podformuly.
 
 ### Python
-Nasledovný program [`cv03.py`](cv03.py) musí korektne fungovať, keď sa k
-nemu priloží vaša knižnica:
-```python
-from formula import Variable, Negation, Conjunction, Dijunction, Implication, Equivalence
+Program [`cv03.py`](cv03.py) musí korektne zbehnúť s vašou knižnicou
+(súborom `formula.py`, ktorý odovzdáte). 
 
-f = Equivalence(
-	Conjunction(
-		Variable('alfa'),
-		Negation(Variable('beta'))
-	),
-	Disjunction(
-		Variable('alfa'),
-		Implication(
-			Variable('beta'),
-			Variable('alfa')
-		)
-	)
-)
-# vypise ((alfa&-beta)<=>(alfa|(beta=>alfa)))
-print(f.toString())
-
-i = {}
-i['alfa'] = True;
-i['beta'] = False;
-if f.eval(i):
-	print('pravdiva')
-else:
-	print('nepravdiva')
-return 0;
-```
 
 ###Java:
-Nasledovný program [`Cv03.cpp`](Cv03.cpp) musí byť skompilovateľný, keď sa k
-nemu priloží vaša knižnica:
-```java
-
-import java.util.Map;
-import java.util.HashMap;
-
-public class Cv03.java {
-	public static void main(String[] args) {
-		Formula f = new Equivalence(
-			new Conjunction(
-				new Variable("alfa"),
-				new Negation(new Variable("beta"))
-			),
-			new Disjunction(
-				new Variable("alfa"),
-				new Implication(
-					new Variable("beta"),
-					new Variable("alfa")
-				)
-			)
-		);
-		// vypise ((alfa&-beta)<=>(alfa|(beta=>alfa)))
-		System.out.println(f.toString());
-		Map<String,Boolean> i = new HashMap<String,Boolean>();
-		i.put("alfa", true);
-		i.put("beta", false);
-		if (f.eval(i)) {
-			System.out.println("pravdiva");
-		} else {
-			System.out.println("nepravdiva");
-		}
-}
-```
+Program [`Cv03.java`](Cv03.java) musí byť skompilovateľný, keď sa k
+nemu priloží vaša knižnica.
