@@ -1,3 +1,9 @@
+#!/bin/env python
+
+"""
+  Testovaci program pre kniznicu formula.py
+"""
+
 from formula import Variable, Negation, Conjunction, Disjunction, Implication, Equivalence
 
 class Tester(object):
@@ -20,7 +26,8 @@ class Tester(object):
 			self.compare(formula.eval(interpretation), result, "eval")
 
 	def status(self):
-		print("TESTED %d PASSED %d" % (self.tested, self.passed))
+		print("TESTED %d" % (self.tested,))
+		print("PASSED %d" % (self.passed,))
 		if self.tested == self.passed:
 			print("OK")
 		else:
