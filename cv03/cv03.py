@@ -6,7 +6,7 @@ f = Equivalence(
 		Negation(Variable('beta'))
 	),
 	Disjunction(
-		Vriable('alfa'),
+		Variable('alfa'),
 		Implication(
 			Variable('beta'),
 			Variable('alfa')

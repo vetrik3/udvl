@@ -9,7 +9,7 @@ int main()
 			new Negation(new Variable("beta"))
 		),
 		new Disjunction(
-			new Vriable("alfa"),
+			new Variable("alfa"),
 			new Implication(
 				new Variable("beta"),
 				new Variable("alfa")

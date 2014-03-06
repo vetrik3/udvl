@@ -66,12 +66,18 @@ pravidiel:
   ľavej a pravej podformuly
 - `Equivalence`: reťazec `(A<=>B)`, kde `A` a `B` sú reprezentácie
   ľavej a pravej podformuly
-Teda napri
+
+Teda napríklad v objektovej štruktúre
+
+![GitHub branch](../images/formula.png)
+
+metóda `toString` koreňového objektu triedy `Implikacia` vráti reťazec
+`(-(A&C)=>(--B|(D&F)))`.
 
 Funkcia `eval` vráti `True` alebo `False` podľa toho, či je formula pravdivá
 pri danej interpretácii. Ak sa stane, že ohodnotenie neobsahuje nejakú
 premennú, ktorá sa vyskytne vo formule, tak môžete buď vygenerovať chybu /
-výnimku alebo ju považovať za False.
+výnimku alebo ju považovať za `False`.
 
 ## Interpretácia
 Interpretácia je mapa z reťazcov na Bool, použite správny typ podľa vášho
@@ -100,7 +106,7 @@ if f.eval(i) != i['a']:
 ```
 
 ### Java:
-Poižite implementacie rozhrania java.util.Map, napr. java.util.HashMap na reprezentovanie interpretácie.
+Použite implementacie rozhrania java.util.Map, napr. java.util.HashMap na reprezentovanie interpretácie.
 
 príklad použitia:
 ```java
@@ -123,7 +129,7 @@ nemu priloží vaša knižnica:
 ```c++
 #include <iostream>
 
-#include "formla.h"
+#include "formula.h"
 
 int main()
 {
@@ -133,7 +139,7 @@ int main()
 			new Negation(new Variable("beta"))
 		),
 		new Disjunction(
-			new Vriable("alfa"),
+			new Variable("alfa"),
 			new Implication(
 				new Variable("beta"),
 				new Variable("alfa")
@@ -169,7 +175,7 @@ f = Equivalence(
 		Negation(Variable('beta'))
 	),
 	Disjunction(
-		Vriable('alfa'),
+		Variable('alfa'),
 		Implication(
 			Variable('beta'),
 			Variable('alfa')
@@ -205,7 +211,7 @@ public class Cv03.java {
 				new Negation(new Variable("beta"))
 			),
 			new Disjunction(
-				new Vriable("alfa"),
+				new Variable("alfa"),
 				new Implication(
 					new Variable("beta"),
 					new Variable("alfa")
