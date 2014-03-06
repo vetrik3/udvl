@@ -100,7 +100,15 @@ if f.eval(i) != i['a']:
 ```
 
 ### Java:
-**TODO**
+Poižite implementacie rozhrania java.util.Map, napr. java.util.HashMap na reprezentovanie interpretácie.
+
+príklad použitia:
+```java
+Map<String,Boolean> i = new HashMap<String,Boolean>();
+i.put(a,true);
+Formula f = new Variable("a");
+if (f.eval(i) != i.get("a")) { /* nieco je zle */ }
+```
 
 ## Technické detaily riešenia
 
@@ -181,4 +189,38 @@ else:
 return 0;
 ```
 
-Java:
+###Java:
+Nasledovný program [`Cv03.cpp`](Cv03.cpp) musí byť skompilovateľný, keď sa k
+nemu priloží vaša knižnica:
+```java
+
+import java.util.Map;
+import java.util.HashMap;
+
+public class Cv03.java {
+	public static void main(String[] args) {
+		Formula f = new Equivalence(
+			new Conjunction(
+				new Variable("alfa"),
+				new Negation(new Variable("beta"))
+			),
+			new Disjunction(
+				new Vriable("alfa"),
+				new Implication(
+					new Variable("beta"),
+					new Variable("alfa")
+				)
+			)
+		);
+		// vypise ((alfa&-beta)<=>(alfa|(beta=>alfa)))
+		System.out.println(f.toString());
+		Map<String,Boolean> i = new HashMap<String,Boolean>();
+		i.put("alfa", true);
+		i.put("beta", false);
+		if (f.eval(i)) {
+			System.out.println("pravdiva");
+		} else {
+			System.out.println("nepravdiva");
+		}
+}
+```
