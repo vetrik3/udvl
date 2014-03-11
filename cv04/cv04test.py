@@ -1,4 +1,10 @@
 #! /bin/env python
+#
+# Testovaci program pre sudoku kniznicu.
+#
+# Kniznica musi byt v subore sudoku.py a musi implementovat triedu
+# SudokuSolver s metodou solve.
+#
 
 import sys
 from sudoku import SudokuSolver
@@ -17,14 +23,14 @@ class Tester(object):
         if len(s) !=9:
             print('ERROR: Duplicate number %s!' % (msg,))
             return False
-        if s != range(1,10):
+        if s != list(range(1,10)):
             print('ERROR: Wrong numbers %s!' % (msg,))
             return False
         return True
 
     def checkInput(self, i, s):
-        for r in xrange(9):
-            for c in xrange(9):
+        for r in range(9):
+            for c in range(9):
                 if i[r][c] != 0:
                     if i[r][c] != s[r][c]:
                         print('ERROR: does not match input at %d,%d!' % (r,c))
@@ -34,15 +40,15 @@ class Tester(object):
     def checkGood(self, i, s):
         if not self.checkInput(i, s):
             return False
-        for row,r in zip(s,xrange(9)):
+        for row,r in zip(s,range(9)):
             if not self.checkList(row, 'in row %d: %s' % (r,repr(row))):
                 return False
-        for c in xrange(9):
+        for c in range(9):
             col = [ row[c] for row in s ]
             if not self.checkList(col, 'in col %d: %s' % (c,repr(col))):
                 return False
-        for sr in xrange(3):
-            for sc in xrange(3):
+        for sr in range(3):
+            for sc in range(3):
                 a = sc*3
                 b = sc*3 + 3
                 l = s[sr*3][a:b] + s[sr*3+1][a:b] + s[sr*3+2][a:b]
