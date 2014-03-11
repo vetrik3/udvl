@@ -1,9 +1,9 @@
 Bonus 1 (2b)
 ============
 
-**Riešenie odovzdávajte podľa
+*Riešenie odovzdávajte podľa
 [pokynov na konci tohoto zadania](#technické-detaily-riešenia)
-do Nedele 16.3.  23:59:59.**
+do __Nedele 23.3.  23:59:59__.*
 
 Do triedy `Formula` z cvičenia 3 doprogramujte statickú metódu
 `parse`, ktorá dostane ako argument reťazec vo formáte, aký vyrába
