@@ -73,7 +73,7 @@ maticu čísel (zoznam zoznamov čísel) a vracia rovnako dvojrozmernú maticu
 čísel.
 
 Program [`cv04test.py`](cv04test.py) musí korektne zbehnúť s vašou knižnicou
-(súborom `formula.py`, ktorý odovzdáte).
+(súborom `sudoku.py`, ktorý odovzdáte).
 
 Ak chcete použiť knižnicu z [examples/sat](../examples/sat), nemusíte si ju
 kopírovať do aktuálne adresára, stačí ak na začiatok svojej knižnice pridáte
