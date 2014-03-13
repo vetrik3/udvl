@@ -70,7 +70,10 @@ std::string SatSolver::getSolverPath()
 
 SatSolver::Result SatSolver::solve(const std::string &theoryFile, const std::string &outputFile)
 {
-	system((getSolverPath() + " " + theoryFile + " " + outputFile + " >solver_out.txt").c_str());
+	system((getSolverPath()
+				+ " " + theoryFile
+				+ " " + outputFile
+				+ " >solver_out.txt 2>solver_err.txt").c_str());
 
 	Result res;
 
