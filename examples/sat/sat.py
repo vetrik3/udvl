@@ -67,24 +67,35 @@ class SatSolver(object):
         """
 
         self.paths = []
+        if solverPath:
+            self.paths.append(solverPath)
+
         if sys.platform.startswith('linux'):
             self.paths += [
-                    'minisat', 'MiniSat_v1.14_linux',
+#                    'minisat', 'MiniSat_v1.14_linux',
+                    './minisat', './MiniSat_v1.14_linux',
                     '../tools/lin/minisat'
                 ]
-        else:
+        elif sys.platform.startswith('win'):
             self.paths += [
                     'minisat.exe', 'MiniSat_v1.14.exe',
                     '../tools/win/minisat.exe',
                 ]
-        if solverPath:
-            self.paths.append(solverPath)
+        else:
+            pass # empty solver paths will fall back to try 'minisat'
+
+        # default fall for all
+        self.paths.append('minisat')
 
     def getSolverPath(self):
         """ Returns the path to solver binary. """
         for fn in self.paths:
-            if os.path.isfile(fn):
+            try:
+                subprocess.check_output([fn, '--help'], stderr = subprocess.STDOUT)
+                #sys.stderr.write('using sat solver:  "%s"\n' % fn)
                 return fn
+            except OSError:
+                pass
         raise IOError('Solver executable not found!')
 
     def solve(self, theory, output):
