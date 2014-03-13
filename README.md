@@ -21,6 +21,7 @@ Zadania:
 * [Cvičenie 1](cv01) (do Pondelka 3.3. 23:59:59)
 * [Cvičenie 2](cv02) (do Nedele 9.3. 23:59:59)
 * [Cvičenie 3](cv03) (do Nedele 16.3.  23:59:59)
+* [Cvičenie 4](cv04) (do Nedele 23.3.  23:59:59)
 
 Bonusy:
 
