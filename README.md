@@ -27,4 +27,9 @@ Bonusy:
 
 * [Bonus 1](bonus01) (do Nedele 23.3.  23:59:59)
 
+Domáce úlohy
+------------
+
+* [DU 1](du01) (do Štvrtku 27.3. 9:55)
+
 [Inštrukcie na odovzdávanie riešení](odovzdavanie.md)
