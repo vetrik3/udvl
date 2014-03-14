@@ -45,11 +45,11 @@ Dokážte, že
 
 Uvažujme naslednovnú definíciu:
 
-Formula `X` je symetrická v `a` a `b` vtt keď pre každé boolovské ohodnotenie `v` platí:
+Formula `X` je symetrická v `a` a `b`, kde `a` a `b` sú premenné,  vtt keď pre každé boolovské ohodnotenie `v` platí:
 nech `v'` je boolovské ohodnotenie také, že
-* `v'(a) = v(b)`;
-* `v'(b) = v(a)`;
-* 'v'(x) = v(x) pre ostatná premenné rôzne od `a` a `b`,
+    * `v'(a) = v(b)`;
+    * `v'(b) = v(a)`;
+    * `v'(x) = v(x)` pre ostatné premenné rôzne od `a` a `b`,
 potom `v(X) = v'(X)`.
 
 Dokážte,  že:
