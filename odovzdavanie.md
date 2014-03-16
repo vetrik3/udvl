@@ -243,7 +243,7 @@ aby ste dodržali nasledovné pravidlá týkajúce sa odovzávania zdrojákov.
 - Riešenie musí obsahovať súbor `cvXX.cpp` s main funkciou, kde `XX` je číslo
   cvičenia.
 - Riešenie môže obsahovať iba `.cpp` a `.h` súbory.
-- Kód musí byť skompilovateľný príkazom `g++ -Wall --std=c++0x -o cvXX *.cpp`
+- Kód musí byť skompilovateľný príkazom `g++ -Wall --std=c++11 -o cvXX *.cpp`
 - Nepoužívajte platformovo špecifické veci. Kód bude kompilovaný na unixovom
   systéme. Ak používate Visual Studio, dajte si pozor na [predkompilované
   hlavičkové súbory](http://en.wikipedia.org/wiki/Precompiled_header).
