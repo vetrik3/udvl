@@ -1,6 +1,7 @@
 #!/bin/env python
 
-import StringIO
+import io
+StringIO = io
 import itertools
 
 """
@@ -74,7 +75,7 @@ class Tester(object):
 
         self.compare(
                 sorted([varMap[k] for k in varMap.keys()]),
-                range(1, len(sorted(list(set(namesPre+namesAdd)))) + 1),
+                list(range(1, len(sorted(list(set(namesPre+namesAdd)))) + 1)),
                 'VariableMap: wrong variable numbers %s' % varMap.toString())
 
         rev = varMap.reverse()
@@ -101,7 +102,7 @@ class Tester(object):
             keys = sorted(varMap.keys())
             values = sorted([ varMap[v] for v in varMap.keys() ])
             self.compare(keys, sorted(names), 'extendVarMap wrong var names %s %s' % (names, cnf.toString()))
-            self.compare(values, range(1, len(names)+1), 'extendVarMap wrong numbers %s %s' % (names, cnf.toString()))
+            self.compare(values, list(range(1, len(names)+1)), 'extendVarMap wrong numbers %s %s' % (names, cnf.toString()))
             for k,v in [ (v,varMap[v]) for v in names[:pre]]:
                 self.compare(varMap[k], v, 'extendVarMap fixed mismatch %s %s' % (names, cnf.toString()))
 
