@@ -166,13 +166,20 @@ ste ho menili.
 Program [`cv05test.cpp`](cv05test.cpp) musí byť skompilovateľný keď k nemu
 priložíte vašu knižnicu (súbory `cnf.h`/`cnf.cpp`, ktoré odovzdáte).
 
-`Cnf` a `CnfClause` majú byť oddedené od `std::vector<CnfClause>` a
-`std::vector<CnfLit>`.
+POZOR: cv05test.cpp netestuje všetku funkcionalitu! bohužiaľ
+sa nám z časových dôvodov neoplatilo ich vyrábať.
+
+`Cnf` a `CnfClause` majú spĺňať podmienky pre
+[`ReversibleContainer`](http://en.cppreference.com/w/cpp/concept/ReversibleContainer)
+s
+[`RandomAccessIterator`-om](http://en.cppreference.com/w/cpp/concept/RandomAccessIterator).
+Túto magickú podmienku najjednoduchšie splníte tak, že vaše triedy oddedíte
+od `std::vector<CnfClause>` a `std::vector<CnfLit>`.
 
 `CnfLit` musí implementovať unárny `CnfLit CnfLit::operator-()`.
 
 `VariableMap` musí implementovať `int VariableMap::operator[](std::string)`
-na prístup k číslam premenných.
+(plus ostatné metódy).
 
 `InputFile` a `OutFile` budú (referncie na) `std::istream` a `std::ostream`
 
@@ -182,4 +189,12 @@ typedef std::map<std::string, bool> Interpretation;
 ```
 
 ### Java
-TODO
+Odovzdávajte súbor `Cnf.java`, ktorý obsahuje potrebné triedy (bohužiaľ testy
+sa nám z časových dôvodov neoplatilo vyrábať).
+
+Triedy emulujúce zoznamy musia implementovať interface `Iterable<E>` a
+`List<E>`. Najjednoduchší spôsob ako to dosiahnuť je oddediť vašu triedu od
+[`AbstractList<E>`](http://docs.oracle.com/javase/7/docs/api/java/util/AbstractList.html)
+a implementovať metódy `get(int)`, `size()`, `set(int, E)`, `add(int, E)` a
+`remove(int)`. Triedy samozrejme majú mať konštruktor, ktorý akceptuje pole
+podelementov.
