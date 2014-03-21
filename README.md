@@ -6,6 +6,7 @@ Stránka predmetu je http://dai.fmph.uniba.sk/~siska/udvl/.
 Oznamy
 ------
 
+* **21.3.** du01: pridaná možnosť odovzdávať .txt a poznámka o tom ako nahrávať binárne súbory
 
 Cvičenia
 --------
