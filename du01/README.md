@@ -6,10 +6,22 @@ na začiatku prednášky).
 
 Úlohu odovzdávajte buď fyzicky na papier formátu A4 (čitateľne označenom a
 podpísanom) na prednáške alebo na cvičeniach, alebo elektronicky vo formáte PDF
-ako súbor `du01.pdf` do vetvy `du01`.  Môžete odovzdať aj oskenované/odfotené
+(ako súbor `du01.pdf`) alebo ako obyčjaný textový súbor (`du01.txt`)
+do vetvy `du01`.  Môžete odovzdať aj oskenované/odfotené
 papierové verzie ako súbor `du01.jpg` alebo `du01.png`, ak sú dostatočne čitateľné
 (dostatočné rozlíšenie, kontrast, v oskenovanej verzii sa škaredé písmo trochu
 ťažšie lúšti,...). Nezabudnite vyrobiť pull request.
+
+Bohužiaľ cez webové rozhranie sa na github dajú súbory len priamo písať alebo
+copy-paste-ovať, binárne súbory treba nahrať pomocou
+GIT-u ([msysgit](http://msysgit.github.io/) alebo čistý [git](http://git-scm.com/downloads))
+alebo [github programu pre windows](http://windows.github.com/)
+respektíve pre [Mac](http://mac.github.com/).
+
+Github pre windows/mac je vcelku jednoduchý: stačí nainštalovať, zadať meno a heslo,
+naklonovať svoj repozitár, prepnúť správnu vetvu, nahrať do správnych adresárov súbory,
+commit-núť a nahrať na server (v tomto programe to volaju "sync/synchronize branch").
+Samozrejme potom treba ešte (cez webová rozhranie) vyrobiť pull request.
 
 ## 1.1 (1b)
 
