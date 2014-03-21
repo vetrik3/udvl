@@ -3,6 +3,10 @@
 
 Stránka predmetu je http://dai.fmph.uniba.sk/~siska/udvl/.
 
+Oznamy
+------
+
+
 Cvičenia
 --------
 * Pon 12:20 H6
